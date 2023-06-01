@@ -1,0 +1,430 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+/* font-family: 'Roboto', sans-serif; */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+/* font-family: 'Poppins', sans-serif; */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    transition: all .2s linear;
+    font-family: sans-serif;
+    text-transform: capitalize;
+    text-decoration: none;
+    list-style: none;
+}
+html{
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+body{
+    overflow-x: hidden;
+    width: 100%;
+}
+:root{
+    --white: #fff;
+    --black: #111;
+    --primary: #fb5607;
+    --secondary: ;
+    --bg: ; 
+    --box-shadow: 0px 5px 20px rgba(0,0,0,.05);
+    --border: ; 
+    --para: #ccc; 
+}
+section{
+    padding: 40px 9%;
+}
+.btn{
+    font-size: 18px;
+    color: #fff;
+    background: var(--primary);
+    display: inline-block;
+    padding: 10px 30px;
+    margin-top: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    transition: .5s;
+}
+.btn:hover{
+    letter-spacing: 6px;
+}
+.heading{
+    font-size: 28px;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    text-align: center;
+    margin-bottom: 20px;
+}
+.heading span{
+    color: var(--primary);
+    font-size: 45px;
+}
+.head-para{
+    text-align: center;
+}
+.row2{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    row-gap: 40px;
+    align-items: center;
+}
+.row2 .content{
+    flex: 1 1 450px;
+}
+.row2 .imgBox{
+    flex: 1 1 450px;
+}
+.row2 .imgBox img{
+    width: 100%;
+}
+/* ===================
+Header Section Starts
+================ */
+header{
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    padding: 40px 100px;
+    z-index: 1000;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+header.sticky{
+    background: var(--white);
+    padding: 10px 100px;
+    box-shadow: var(--box-shadow);
+}
+header .logo{
+    color: #fff;
+    font-weight: 700;
+    font-size: 2em;
+}
+header.sticky .logo{
+    color: var(--black);
+}
+header .logo span,
+header .logo i{
+    color: var(--primary);
+}
+header .logo i{
+    margin-right: 10px;
+    font-size: 1.1em;
+}
+header .nav{
+    position: relative;
+    display: flex;
+    gap: 30px;
+}
+header .nav a{
+    color: #fff;
+    font-weight: 300;
+    font-size: 17px;
+}
+header .nav a:hover{
+    color: var(--primary);
+}
+header.sticky .nav a{
+    color: var(--black);
+}
+#menu{
+    font-size: 30px;
+    color: #fff;
+    cursor: pointer;
+    display: none;
+}
+header.sticky #menu{
+    color: #111;
+}
+.banner{
+    position: relative;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(45deg,rgba(0,0,0,.5),rgba(0,0,0,.5)),url(IMG/banner.jpg);
+    background-size: cover;
+    background-position: right;
+    background-repeat: no-repeat;
+}
+.banner .content{
+    max-width: 900px;
+    text-align: center;
+}
+.banner .content h2{
+    font-size: 4em;
+    color: var(--white);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+.banner .content p{
+    font-size: 17px;
+    color: var(--white);
+    line-height: 1.7;
+}
+/* ===================
+Header Section Ends
+================ */
+
+/* ===================
+About Section Starts
+================ */
+
+.about .heading{
+    text-align: left;
+}
+.about .content p{
+    color: #555;
+    font-size: 17px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+    font-family: 'Roboto', sans-serif;
+}
+/* ===================
+About Section Ends
+================ */
+/* ===================
+Menu Section Starts
+================ */
+
+.menu p{
+    text-align: center;
+}
+.menu .menuCards{
+    margin-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px,1fr));
+    gap: 20px;
+    row-gap: 40px;
+}
+.menuCards .card{
+    box-shadow: 5px 5px 10px rgba(0,0,0,.2);
+    border-radius: 10px;
+    overflow: hidden;
+    position: relative;
+}
+.menuCards .card:hover{
+    transform: translateY(-10px);
+}
+.menuCards .card .imgBox{
+    overflow: hidden;
+}
+.menuCards .card:hover img{
+    transform: scale(1.1);
+}
+.menuCards .card .cardContent{
+    padding: 10px 20px 30px 20px;
+    position: relative;
+}
+.menuCards .card .title{
+    text-align: left;
+    font-size: 23px;
+    color: var(--primary);
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+.menuCards .card p {
+    text-align: left;
+    color: #555;
+    margin-bottom: 10px;
+}
+.menuCards .card .stars{    
+    color: var(--primary);
+}
+.menuCards .card .chef{
+    position: absolute;
+    right: 20px;
+    bottom: 20px;
+    font-size: 14px;
+    font-weight: 300;
+    color: #999;
+} 
+.menuCards .card .ribbon{
+    position: absolute;
+    top: 10px;
+    left: -35px;
+    background-color: var(--primary);
+    color: #fff;
+    width: 120px;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    transform: rotate(-45deg);
+    z-index: 100;
+}
+.menuCards .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+/* ===================
+Menu Section Ends
+================ */
+
+/* ===================
+Expert Section Starts
+================ */
+.expert p{
+    text-align: center;
+}
+.expert .cards{
+    margin-top: 40px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px, 1fr));
+    gap: 20px;
+    row-gap: 40px;
+}
+.expert .cards .card{
+    box-shadow: 0 5px 10px rgba(0,0,0,.2);
+}
+.expert .cards .card img{
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+.expert .cards .card .content{
+    padding: 20px 20px;
+}
+.expert .cards .card .content p{
+    text-align: left;
+    font-size: 18px;
+}
+.expert .cards .card .content .title{
+    font-size: 20px;
+    color: var(--primary);
+    margin-bottom: 20px;
+}
+/* ===================
+Expert Section Ends
+================ */
+
+/* ===================
+Contact Section Starts
+================ */
+.contact .row2 .content{
+    margin-top: 40px;
+    box-shadow: 0 10px 10px rgba(0,0,0,.2);
+    border-radius: 10px;
+    padding: 50px 20px;
+    max-width: 500px;
+    width: 300px;
+}
+.contact .row2 .content p{
+    font-size: 20px;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    font-weight: 600;
+}
+.contact .row2 .content form .inputField{
+    padding: 10px ;
+    display: block;
+    width: 100%;
+    margin: 10px 0 ;
+    resize: none;
+    outline: none;
+    font-size: 17px;
+}
+.contact .row2 .content form .inputField:focus{
+    border-color: #111;
+}
+.contact .row2 .content form input[type="submit"]{
+    outline: none;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.contact .row2 .imgBox{
+    height: 450px;
+    overflow: hidden;
+}
+.contact .row2 .imgBox img{
+    height: 100%;
+    transform: rotate(180deg);
+    object-fit: cover;
+    user-select: none;
+    border-radius: 20px;
+}
+/* ===================
+Contact Section Ends
+================ */
+
+/* ===================
+Footer Section Starts
+================ */
+.footer{
+    width: 100%;
+    background-color: #eee;
+    padding: 20px;
+}
+footer .credit{
+    text-align: center;
+    font-size: 18px;
+}
+footer .credit span{
+    color: var(--primary);
+}
+/* ===================
+Footer Section Ends
+================ */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Media Queries */
+@media(max-width:970px){
+    header{
+        padding: 40px;        
+    }
+    header.sticky{
+        padding: 10px 40px;
+    }
+    header .nav{
+        position: absolute;
+        top: 100%;
+        right: 0;
+        width: 300px;
+        height: 90vh;
+        box-shadow: 0 10px 10px rgba(0,0,0,.5);
+        flex-direction: column;
+        background-color: var(--white);
+        padding: 50px 40px;
+        border-radius: 10px 0 0 0;
+        opacity: 0;
+        transform: translateX(120%);
+    }
+    header .nav.active{
+        opacity: 1;
+        transform: translateX(0);
+    }
+    header .nav a{
+        color: #111;
+        font-size: 18px;
+        text-align: left;
+    }
+    header.sticky .nav{
+        border-radius: 0;
+    }
+    #menu{
+        display: block;
+    }
+}
+
+@media(max-width:760px){
+    section{
+        padding: 40px 4%;
+    }
+}
